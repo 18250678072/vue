@@ -9,7 +9,7 @@
         </div>
         <hr>
         <div class="content">
-            <PhotoInfo></PhotoInfo>
+            <PhotoInfo :id="this.id"></PhotoInfo>
         </div>
         <h3>发表评论</h3>
         <hr>

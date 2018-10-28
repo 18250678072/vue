@@ -1,11 +1,12 @@
 <template>
     <div>
         <!-- <h1>HomeContainer</h1>  -->
-        <mt-swipe :auto="4000">
+        <!-- <mt-swipe :auto="4000">
             <mt-swipe-item v-for="item in lunbo" :key="item.id">
                 <img :src="item.image" alt="">
             </mt-swipe-item>
-        </mt-swipe>
+        </mt-swipe> -->
+        <swiper :lunbotu = "lunbo"></swiper>
         <ul class="mui-table-view mui-grid-view mui-grid-9">
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                         <router-link to="/home/Newslist">
@@ -14,7 +15,7 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
 		                    <img src="../../image/menu2.png" alt="">
 		                    <div class="mui-media-body">图片分享</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/Buy">
 		                    <img src="../../image/menu3.png" alt="">
 		                    <div class="mui-media-body">商品购买</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
@@ -31,8 +32,8 @@
 </template>
 
 <script>
-
 import { Toast } from "mint-ui";
+import swiper from '../subcomponent/swiper.vue'
 
 export default {
     data(){
@@ -54,6 +55,9 @@ export default {
                 // console.log(this.lunbo)
             })
         }
+    },
+    components:{
+        swiper
     }
 }
 </script>

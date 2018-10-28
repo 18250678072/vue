@@ -14,6 +14,10 @@ Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button)
 
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
+
 console.log('ok')
 var vm = new Vue({
 	el:"#app",
